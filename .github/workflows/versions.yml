@@ -11,6 +11,6 @@ jobs:
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           packages: |
-            react-native-tab-view
+            react-native-gesture-handler-tabview
             react-native-gesture-handler
             react-native-reanimated

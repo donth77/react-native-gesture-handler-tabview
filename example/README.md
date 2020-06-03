@@ -1,6 +1,6 @@
 # Run the example
 
-- [View it with Expo](https://expo.io/@satya164/react-native-tab-view-demos)
+- [View it with Expo](https://expo.io/@satya164/react-native-gesture-handler-tabview-demos)
 - Run the example locally
   - Clone the repository and `cd` to this directory
   - Run `yarn` to install the dependencies

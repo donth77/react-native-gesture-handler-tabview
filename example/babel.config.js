@@ -5,7 +5,7 @@ module.exports = {
       'module-resolver',
       {
         alias: {
-          'react-native-tab-view': '../src/index',
+          'react-native-gesture-handler-tabview': '../src/index',
         },
       },
     ],

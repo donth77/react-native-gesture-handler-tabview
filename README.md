@@ -6,8 +6,8 @@
 
 A cross-platform Tab View component for React Native.
 
-- [Run the example app to see it in action](https://expo.io/@satya164/react-native-tab-view-demos).
-- Checkout the [example/](https://github.com/react-native-community/react-native-tab-view/tree/master/example) folder for source code.
+- [Run the example app to see it in action](https://expo.io/@satya164/react-native-gesture-handler-tabview-demos).
+- Checkout the [example/](https://github.com/donth77/react-native-gesture-handler-tabview/tree/master/example) folder for source code.
 
 ## Features
 
@@ -20,14 +20,14 @@ A cross-platform Tab View component for React Native.
 
 ## Demo
 
-<a href="https://raw.githubusercontent.com/satya164/react-native-tab-view/master/demo/demo.mp4"><img src="https://raw.githubusercontent.com/satya164/react-native-tab-view/master/demo/demo.gif" width="360"></a>
+<a href="https://raw.githubusercontent.com/satya164/react-native-gesture-handler-tabview/master/demo/demo.mp4"><img src="https://raw.githubusercontent.com/satya164/react-native-gesture-handler-tabview/master/demo/demo.gif" width="360"></a>
 
 ## Installation
 
 Open a Terminal in the project root and run:
 
 ```sh
-yarn add react-native-tab-view
+yarn add react-native-gesture-handler-tabview
 ```
 
 Now we need to install [`react-native-gesture-handler`](https://github.com/kmagiera/react-native-gesture-handler) and [`react-native-reanimated`](https://github.com/kmagiera/react-native-reanimated).
@@ -78,7 +78,7 @@ We're done! Now you can build and run the app on your device/simulator.
 ```js
 import * as React from 'react';
 import { View, StyleSheet, Dimensions } from 'react-native';
-import { TabView, SceneMap } from 'react-native-tab-view';
+import { TabView, SceneMap } from 'react-native-gesture-handler-tabview';
 
 const FirstRoute = () => (
   <View style={[styles.scene, { backgroundColor: '#ff4081' }]} />
@@ -119,12 +119,12 @@ const styles = StyleSheet.create({
 });
 ```
 
-[Try this example on Snack](https://snack.expo.io/@satya164/react-native-tab-view-quick-start)
+[Try this example on Snack](https://snack.expo.io/@satya164/react-native-gesture-handler-tabview-quick-start)
 
 ## More examples on Snack
 
-- [Custom Tab Bar](https://snack.expo.io/@satya164/react-native-tab-view-custom-tabbar)
-- [Lazy Load](https://snack.expo.io/@satya164/react-native-tab-view-lazy-load)
+- [Custom Tab Bar](https://snack.expo.io/@satya164/react-native-gesture-handler-tabview-custom-tabbar)
+- [Lazy Load](https://snack.expo.io/@satya164/react-native-gesture-handler-tabview-lazy-load)
 
 ## API reference
 
@@ -205,7 +205,7 @@ You need to make sure that your individual routes implement a `shouldComponentUp
 `SceneMap` takes an object with the mapping of `route.key` to React components and returns a function to use with `renderScene` prop.
 
 ```js
-import { SceneMap } from 'react-native-tab-view';
+import { SceneMap } from 'react-native-gesture-handler-tabview';
 
 ...
 
@@ -262,7 +262,7 @@ const renderScene = ({ route }) => {
 Callback which returns a custom React Element to use as the tab bar:
 
 ```js
-import { TabBar } from 'react-native-tab-view';
+import { TabBar } from 'react-native-gesture-handler-tabview';
 
 ...
 
@@ -285,30 +285,29 @@ If this is not specified, the default tab bar is rendered. You pass this props t
 
 Callback which returns a custom React Element to use as pager.
 
-E.g. you can import `ScrollPager` from `react-native-tab-view`. It might deliver slightly better experience on iOS.
+E.g. you can import `ScrollPager` from `react-native-gesture-handler-tabview`. It might deliver slightly better experience on iOS.
 
 ```js
-import { TabView, ScrollPager } from 'react-native-tab-view';
+import { TabView, ScrollPager } from 'react-native-gesture-handler-tabview';
 // ...
 <TabView
-  renderPager={props => <ScrollPager { ...props }/>}
+  renderPager={(props) => <ScrollPager {...props} />}
   // ...
-/>
+/>;
 ```
 
-Also, you can use `ViewPager`-based pager with [`React Native Tab View ViewPager Adapter
-`](https://github.com/software-mansion/react-native-tab-view-viewpager-adapter). 
+Also, you can use `ViewPager`-based pager with [`React Native Tab View ViewPager Adapter`](https://github.com/software-mansion/react-native-gesture-handler-tabview-viewpager-adapter).
 
 ```js
-import { TabView } from 'react-native-tab-view';
-import ViewPagerAdapter from 'react-native-tab-view-viewpager-adapter';
+import { TabView } from 'react-native-gesture-handler-tabview';
+import ViewPagerAdapter from 'react-native-gesture-handler-tabview-viewpager-adapter';
 // ...
 <TabView
-  renderPager={props => (
+  renderPager={(props) => (
     <ViewPagerAdapter {...props} transition="curl" showPageIndicator />
   )}
   // ...
-/>
+/>;
 ```
 
 ##### `tabBarPosition`
@@ -611,14 +610,16 @@ Style to apply to the inner container for tabs.
 Style to apply to the tab bar container.
 
 ### `ScrollPager`
+
 Custom pager which can we used inside `renderPager` prop. It is based on ScrollView and might bring a slightly better experience on iOS.
 
 #### Props
+
 It accepts the same set of props as default pager extended with one addition:
 
 ##### ovescroll
-When `true`, the scroll view bounces when it reaches the end of the content. The default value is `false`. 
 
+When `true`, the scroll view bounces when it reaches the end of the content. The default value is `false`.
 
 ## Using with other libraries
 
@@ -633,7 +634,7 @@ Note that some functionalities are not available with the React Navigation 4 int
 
 ### [React Native Navigation (Wix)](https://github.com/wix/react-native-navigation)
 
-If you use React Native Navigation by Wix on Android, you need to wrap all your screens that uses `react-native-tab-view` with `gestureHandlerRootHOC` from `react-native-gesture-handler`. Refer [`react-native-gesture-handler`'s docs](https://kmagiera.github.io/react-native-gesture-handler/docs/getting-started.html#with-wix-react-native-navigation-https-githubcom-wix-react-native-navigation) for more details.
+If you use React Native Navigation by Wix on Android, you need to wrap all your screens that uses `react-native-gesture-handler-tabview` with `gestureHandlerRootHOC` from `react-native-gesture-handler`. Refer [`react-native-gesture-handler`'s docs](https://kmagiera.github.io/react-native-gesture-handler/docs/getting-started.html#with-wix-react-native-navigation-https-githubcom-wix-react-native-navigation) for more details.
 
 ### [Mobx](https://mobx.js.org/)
 
@@ -663,7 +664,7 @@ class MyComponent extends React.Component {
     { key: 'albums', title: 'Albums' },
   ];
 
-  @action handleIndexChange = index => {
+  @action handleIndexChange = (index) => {
     this.index = index;
   };
 
@@ -812,9 +813,7 @@ Remember to add tests for your change if possible.
 
 <!-- badges -->
 
-[build-badge]: https://img.shields.io/circleci/project/github/react-native-community/react-native-tab-view/master.svg?style=flat-square
-[build]: https://circleci.com/gh/react-native-community/react-native-tab-view
-[version-badge]: https://img.shields.io/npm/v/react-native-tab-view.svg?style=flat-square
-[package]: https://www.npmjs.com/package/react-native-tab-view
-[license-badge]: https://img.shields.io/npm/l/react-native-tab-view.svg?style=flat-square
+[version-badge]: https://img.shields.io/npm/v/react-native-gesture-handler-tabview.svg?style=flat-square
+[package]: https://www.npmjs.com/package/react-native-gesture-handler-tabview
+[license-badge]: https://img.shields.io/npm/l/react-native-gesture-handler-tabview.svg?style=flat-square
 [license]: https://opensource.org/licenses/MIT

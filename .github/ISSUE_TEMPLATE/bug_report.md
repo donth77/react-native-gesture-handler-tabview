@@ -1,11 +1,11 @@
 ---
 name: Bug report
-about: Please search the existing issues and read the documentation before opening
+about:
+  Please search the existing issues and read the documentation before opening
   an issue.
 title: ''
 labels: bug
 assignees: ''
-
 ---
 
 <!-- Issues that don't use this template are likely to be closed. -->
@@ -34,12 +34,12 @@ For Syntax Highlighting check this [link](https://help.github.com/en/articles/cr
 
 ### Your Environment
 
-| software                     | version
-| ---------------------------- | -------
-| ios or android               |
-| react-native                 |
-| react-native-tab-view        |
-| react-native-gesture-handler |
-| react-native-reanimated      |
-| node                         |
-| npm or yarn                  |
+| software                             | version |
+| ------------------------------------ | ------- |
+| ios or android                       |
+| react-native                         |
+| react-native-gesture-handler-tabview |
+| react-native-gesture-handler         |
+| react-native-reanimated              |
+| node                                 |
+| npm or yarn                          |

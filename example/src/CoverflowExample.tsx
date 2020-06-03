@@ -8,7 +8,10 @@ import {
   StyleSheet,
   ImageRequireSource,
 } from 'react-native';
-import { TabView, SceneRendererProps } from 'react-native-tab-view';
+import {
+  TabView,
+  SceneRendererProps,
+} from 'react-native-gesture-handler-tabview';
 import Animated from 'react-native-reanimated';
 
 type Route = {

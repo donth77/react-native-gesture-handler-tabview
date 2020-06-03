@@ -252,12 +252,11 @@ export default class TabBar<T extends Route> extends React.Component<
   };
 
   private resetScroll = (index: number) => {
-    if (this.props.scrollEnabled) {
-      this.scrollView &&
-        this.scrollView.scrollTo({
-          x: this.getScrollAmount(this.props, this.state, index),
-          animated: true,
-        });
+    if (this.props.scrollEnabled && this.scrollView) {
+      this.scrollView.scrollTo({
+        x: this.getScrollAmount(this.props, this.state, index),
+        animated: true,
+      });
     }
   };
 
@@ -472,7 +471,7 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   scroll: {
-    overflow: Platform.select({ default: 'scroll', web: undefined }),
+    overflow: 'scroll',
   },
   tabBar: {
     backgroundColor: '#2196f3',

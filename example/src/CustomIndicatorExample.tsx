@@ -8,7 +8,7 @@ import {
   NavigationState,
   SceneRendererProps,
   ScrollPager,
-} from 'react-native-tab-view';
+} from 'react-native-gesture-handler-tabview';
 import Animated from 'react-native-reanimated';
 import Albums from './Shared/Albums';
 import Article from './Shared/Article';

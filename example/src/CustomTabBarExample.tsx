@@ -5,7 +5,7 @@ import {
   SceneMap,
   NavigationState,
   SceneRendererProps,
-} from 'react-native-tab-view';
+} from 'react-native-gesture-handler-tabview';
 import Animated from 'react-native-reanimated';
 import { Ionicons } from '@expo/vector-icons';
 import Albums from './Shared/Albums';

@@ -2,7 +2,7 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "react-native-tab-view": ["./src/index"]
+      "react-native-gesture-handler-tabview": ["./src/index"]
     },
     "allowUnreachableCode": false,
     "allowUnusedLabels": false,
@@ -22,6 +22,6 @@
     "skipLibCheck": true,
     "strict": true,
     "target": "esnext",
-    "isolatedModules": true,
+    "isolatedModules": true
   }
 }

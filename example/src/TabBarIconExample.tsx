@@ -7,7 +7,7 @@ import {
   SceneMap,
   NavigationState,
   SceneRendererProps,
-} from 'react-native-tab-view';
+} from 'react-native-gesture-handler-tabview';
 import Article from './Shared/Article';
 import Chat from './Shared/Chat';
 import Contacts from './Shared/Contacts';

@@ -12,6 +12,7 @@ export type Props<T extends Route> = SceneRendererProps & {
   width: string;
   style?: StyleProp<ViewStyle>;
   getTabWidth: GetTabWidth;
+  widthOffset?: number;
 };
 
 const { interpolate, multiply, Extrapolate } = Animated;
@@ -82,7 +83,10 @@ export default class TabBarIndicator<T extends Route> extends React.Component<
       getTabWidth: GetTabWidth
     ) => {
       const inputRange = routes.map((_, i) => i);
-      const outputRange = inputRange.map(getTabWidth);
+      const widthOffset = this.props.widthOffset || 0;
+      const outputRange = inputRange
+        .map(getTabWidth)
+        .map((width) => width - widthOffset);
 
       return interpolate(position, {
         inputRange,
